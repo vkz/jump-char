@@ -131,7 +131,7 @@ Set this to nil if you don't need it."
 (defun jump-char-isearch-map ()
   "Return `isearch-mode-map' without most isearch functionality."
   (let ((map (copy-keymap jump-char-base-map))
-        (exception-list '(isearch-abort isearch-describe-key isearch-quote-char))
+        (exception-list '(avy-isearch isearch-done isearch-abort isearch-describe-key isearch-quote-char))
         isearch-commands
         (maps (list isearch-mode-map)))
     (while (car maps)
